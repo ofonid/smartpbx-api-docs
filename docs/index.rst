@@ -1,6 +1,7 @@
-# SmartPBX API's documentation!
+SmartPBX API's documentation!
+=============================
 
-Ini adalah dokumentasi penggunaan API SmartPBX OFON https://smartpbx.ofon.biz. SmartPBX merupakan produk dari Ofon https://ofon.co.id.
+Ini adalah dokumentasi penggunaan API `SmartPBX OFON`_. SmartPBX merupakan produk dari `Ofon`_.
 
 .. toctree::
    :maxdepth: 2
@@ -10,8 +11,12 @@ Ini adalah dokumentasi penggunaan API SmartPBX OFON https://smartpbx.ofon.biz. S
    authentication
    api
 
-# Indices and tables
+Indices and tables
+==================
 
 - :ref:`genindex`
 - :ref:`modindex`
 - :ref:`search`
+
+.. _SmartPBX OFON: https://smartpbx.ofon.biz
+.. _Ofon: https://ofon.co.id
