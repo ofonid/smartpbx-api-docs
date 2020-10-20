@@ -20,6 +20,6 @@ $ cd docs
 $ make html
 ```
 
-Dokumentasi ini menggunakan sphinx dan readthedocs.
+Hasil generate html akan berada di folder `docs/_build`. Halaman utama adalah `index.html`. Dokumentasi ini dibuat menggunakan sphinx dan readthedocs.
 
 Happy documenting!
