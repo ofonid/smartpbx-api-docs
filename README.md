@@ -28,7 +28,7 @@ ERROR: Command errored out with exit status 1:
   ERROR: Failed building wheel for rstcheck
   ```
   
-  install [italic]Wheel[/italic] dengan cara:
+  install *Wheel* dengan cara:
   ```
   pip install wheel
   ```
