@@ -1,20 +1,17 @@
-.. SmartPBX API Docs documentation master file, created by
-   sphinx-quickstart on Mon Oct 19 14:41:40 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+# SmartPBX API's documentation!
 
-Welcome to SmartPBX API Docs's documentation!
-=============================================
+Ini adalah dokumentasi penggunaan API SmartPBX OFON https://smartpbx.ofon.biz. SmartPBX merupakan produk dari Ofon https://ofon.co.id.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   introduction
+   authentication
+   api
 
+# Indices and tables
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+- :ref:`genindex`
+- :ref:`modindex`
+- :ref:`search`
