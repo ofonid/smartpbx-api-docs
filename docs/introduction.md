@@ -3,6 +3,7 @@
 SmartPBX menyediakan API supaya kita semua bisa mengembangkan unified telecom application. API dari SmartPBX menggunakan simple HTTP requests REST API.
 
 Beberapa hal yang bisa dilakukan menggunakan SmartPBX REST API:
+
 - Akses terhadap account dan sub-account. Menambahkan dan menghapus parameter.
 - Mendapatkan daftar devices, users, dll. Menambahkan dan menghapus parameternya.
 - Membuat Callflow untuk devices dan nomor telepon.
@@ -11,13 +12,14 @@ Beberapa hal yang bisa dilakukan menggunakan SmartPBX REST API:
 ## Langkah Awal
 
 Setelah mendaftar Ofon paket SmartPBX, anda akan mendapatkan account dengan default setting dan nomor telepon. Akun tersebut sudah siap untuk digunakan dan dilengkapi dengan akses terhadap API maupun melalui portal SmartPBX. Berikut data yang akan anda dapatkan setelah mendaftar:
+
 - Portal URL: `https://smartpbx.ofon.biz`
 - API URL: `https://api.ofon.io:8443/v2/`
 - username (berupa alamat email). contoh: john@example.com
-- password 
+- password
 - account (merupakan nama organisasi atau company milik anda). contoh: JAYA LESTARI
 
-### Akses REST API
+## Akses REST API
 
 API resource mempunyai parameter berikut tersedia di URL:
 
@@ -38,6 +40,7 @@ Untuk melakukan API request, contoh mudahnya adalah menggunakan `curl`:
 ```
 
 Penjelasan singkat:
+
 - `-X GET` adalah perintah curl untuk melakukan HTTP GET Requests.
 - `-H "X-Auth-Token: {AUTH_TOKEN}"` menambahkan header di HTTP Requests. Di sini menggunakan auth token untuk autentikasi.
 - `https://api.ofon.io:8443/v2/` adalah URL dari API SmartPBX
@@ -84,4 +87,3 @@ Dengan menjalankan perintah di atas, akan didapatkan:
 ```
 
 Response di atas akan berbeda tergantung dari setting account, dan resource apa yang diakses.
-

@@ -33,6 +33,7 @@ release = '0.5.0'
 # ones.
 extensions = [
 	"sphinx_rtd_theme",
+	'sphinx_markdown_tables',
 	'recommonmark'
 ]
 
@@ -50,6 +51,13 @@ language = 'en'
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+# Parser Options
+source_parsers = {
+    '.md': 'recommonmark.parser.CommonMarkParser',
+}
+
+source_suffix = ['.rst', '.md']
 
 
 # -- Options for HTML output -------------------------------------------------
