@@ -13,7 +13,7 @@ Devices atau perangkat merupakan sebuah endpoint yang dimiliki oleh account. Dev
 ```shell
 curl -v -X GET \
     -X "X-Auth-Token: {AUTH_TOKEN} \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/devices
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/devices
 ```
 
 Hasilnya:
@@ -46,7 +46,7 @@ curl -v -X PUT \
     -H "X-Auth-Token: {AUTH_TOKEN} \
     -H "Content-Type: application/json" \
     -d '{"data":{"name":"New Device"}}' \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/devices
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/devices
 ```
 
 Hasilnya:
@@ -99,7 +99,7 @@ Hasilnya:
 ```shell
 curl -v -X DELETE \
     -H "X-Auth-Token: {AUTH_TOKEN}" \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}
 ```
 
 ```json
@@ -150,7 +150,7 @@ curl -v -X DELETE \
 ```shell
 curl -v -X GET \
     -H "X-Auth-Token: {AUTH_TOKEN}" \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}
 ```
 
 ```json
@@ -229,7 +229,7 @@ curl -v -X POST \
         "suppress_unregister_notifications": false,
         "id": "4f3330e78e664bb57f8fb23fbaac2429"
         }}' \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}
 ```
 
 ```json
@@ -281,7 +281,7 @@ curl -v -X POST \
 curl -v -X PATCH \
     -H "X-Auth-Token: {AUTH_TOKEN}" \
     -d '{"data":{"presence_id":"dis_my_device"}}' \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}
 ```
 
 ```json
@@ -349,7 +349,7 @@ curl -v -X POST \
            "event": "event"
          }
         }' \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}/notify
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}/notify
 ```
 
 ## Fetch registration statuses of all devices
@@ -361,7 +361,7 @@ This will fetch the current registrations of any devices. If no devices are regi
 ```shell
 curl -v -X GET \
     -H "X-Auth-Token: {AUTH_TOKEN}" \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/devices/status
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/devices/status
 ```
 
 ```json
@@ -388,7 +388,7 @@ Some devices support receiving SIP NOTIFY packets with `event` = `check-sync`. T
 ```shell
 curl -v -X POST \
     -H "X-Auth-Token: {AUTH_TOKEN}" \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}/sync
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/devices/{DEVICE_ID}/sync
 ```
 
 ```json
@@ -428,7 +428,7 @@ Notice that the first device, `{DEVICE_ID_1}` is owned by `{USER_ID}` but the se
 ```shell
 curl -v -X GET \
     -H "X-Auth-Token: {AUTH_TOKEN}" \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}/devices
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}/devices
 ```
 
 ```json
@@ -471,7 +471,7 @@ Here is a minimal API request that creates a device that will authenticate by IP
     -H "X-Auth-Token: {AUTH_TOKEN}" \
     -H "Content-Type: application/json" \
     -d '{"data":{"enabled":true,"name":"authn_by_ip","sip":{"invite_format":"e164", "ip":"{IP_ADDRESS}","method":"ip"}}}' \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/devices
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/devices
 ```
 
 ```json

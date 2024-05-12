@@ -23,7 +23,7 @@ Setelah mendapatkan creadentials, maka bisa menggunakan `user_auth` API untuk me
     $ curl -v -X PUT \
       -H "Content-Type: application/json" \
       -d '{"data":{"credentials":"82a2dc91686ec828a67152d45a5c5ef7", "account_name":"{ACCOUNT_NAME}", "method":[md5|sha1]}' \
-      https://api.ofon.io:8443/v2/user_auth
+      https://api.ofon.biz/v2/user_auth
 ```
 
 Jika berhasil, maka akan mendapatkan respon berikut:
@@ -49,4 +49,3 @@ Jika berhasil, maka akan mendapatkan respon berikut:
 ```
 
 {AUTH_TOKEN} adalah token yang berupa list karakter yang bisa digunakan untuk mengakses API-API lain.
-

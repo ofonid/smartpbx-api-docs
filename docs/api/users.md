@@ -13,7 +13,7 @@ Users represent just that, your users of the system. You can assign multiple dev
 ```shell
 curl -v -X GET \
     -H "X-Auth-Token: {AUTH_TOKEN} \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users
 {
     "auth_token": "{AUTH_TOKEN}",
     "data": [
@@ -60,7 +60,7 @@ curl -v -X PUT \
     -H "X-Auth-Token: {AUTH_TOKEN} \
     -H "Content-Type: application/json" \
     -d '{"data":{"first_name":"User", "last_name":"Three"}}' \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users
 {
     "auth_token": "{AUTH_TOKEN}",
     "data": {
@@ -114,7 +114,7 @@ This request will return the current JSON object of the now-deleted user.
 ```shell
 curl -v -X DELETE \
     -H "X-Auth-Token: {AUTH_TOKEN}" \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}
 {
     "auth_token": "{AUTH_TOKEN}",
     "data": {
@@ -166,7 +166,7 @@ curl -v -X DELETE \
 ```shell
 curl -v -X GET \
     -H "X-Auth-Token: {AUTH_TOKEN} \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}
 {
     "auth_token": "{AUTH_TOKEN}",
     "data": {
@@ -220,7 +220,7 @@ curl -v -X PATCH \
     -H "X-Auth-Token: {AUTH_TOKEN}" \
     -H "Content-Type: application/json" \
     -d '{"data":{"enabled":false}}' \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}
 {
     "auth_token": "{AUTH_TOKEN}",
     "data": {
@@ -278,7 +278,7 @@ curl -v -X POST \
     -H "X-Auth-Token: {AUTH_TOKEN}" \
     -H "Content-Type: application/json" \
     -d '{"data":{"first_name":"User","last_name":"Three","call_restriction":{},"caller_id":{},"contact_list":{},"dial_plan":{},"enabled":false,"hotdesk":{"enabled":false,"keep_logged_in_elsewhere":false,"require_pin":false},"media":{"audio":{"codecs":["PCMU"]},"encryption":{"enforce_security":false,"methods":[]},"video":{"codecs":[]}},"music_on_hold":{},"priv_level":"user","profile":{},"require_password_update":false,"ringtones":{},"verified":false,"vm_to_email_enabled":true}}' \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}
 {
     "auth_token": "{AUTH_TOKEN}",
     "data": {
@@ -333,7 +333,7 @@ curl -v -X POST \
 curl -v -X GET \
     -H "X-Auth-Token: {AUTH_TOKEN} \
     -H "Accept: text/x-vcard"
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}/vcard
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}/vcard
 BEGIN:VCARD
 VERSION:3.0
 FN:User Three
@@ -348,7 +348,7 @@ END:VCARD
 ```shell
 curl -v -X DELETE \
     -H "X-Auth-Token: {AUTH_TOKEN} \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}/photo
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}/photo
 ```
 
 ## Fetch the user's photo, if any
@@ -362,7 +362,7 @@ If the result is successful, you will want to pipe the response into a file.
 ```shell
 curl -v -X GET \
     -H "Accept: application/base64" \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}/photo
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}/photo
 [binary data]
 ```
 
@@ -376,7 +376,7 @@ Use `application/octet-stream` as the content type.
 curl -v -X POST \
     -H "Content-Type: application/octet-stream" \
     --data-binary @/path/to/image.jpg \
-    https://api.ofon.io:8443/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}/photo
+    https://api.ofon.biz/v2/accounts/{ACCOUNT_ID}/users/{USER_ID}/photo
 {
     "auth_token": "{AUTH_TOKEN}",
     "data": {},
